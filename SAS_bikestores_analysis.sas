@@ -1,12 +1,12 @@
 /* Import Data ABC_Bikes Woolywheels*/
-proc import datafile="/export/viya/homes/hsing-yu.hou@alumni.uts.edu.au/assignfolder/ABC_Bikes.xlsx"
+proc import datafile="/home/username/assignfolder/ABC_Bikes.xlsx"
     dbms=xlsx
 	out=ABC_BIKES
 	replace;
 	sheet="Products";
 run;
 
-proc import datafile="/export/viya/homes/hsing-yu.hou@alumni.uts.edu.au/assignfolder/woolyswheels_com_au.xlsx"
+proc import datafile="/home/username/assignfolder/woolyswheels_com_au.xlsx"
     dbms=xlsx
 	out=Woolywheels
 	replace;
@@ -178,7 +178,7 @@ run;
 
 
 /* pdf report */
-ods pdf file="/export/viya/homes/hsing-yu.hou@alumni.uts.edu.au/assignfolder/bike_stores_analysis_report.pdf" style=HTMLBlue;
+ods pdf file="/home/username/assignfolder/bike_stores_analysis_report.pdf" style=HTMLBlue;
 ods noproctitle;
 
 title 'Data analysis and reporting';
@@ -249,7 +249,7 @@ ods pdf close;
 
 
 proc export data=Bikes_Stores
-    outfile="/export/viya/homes/hsing-yu.hou@alumni.uts.edu.au/assignfolder/Bikes_Stores.xlsx"
+    outfile="/home/username/assignfolder/Bikes_Stores.xlsx"
     dbms=xlsx
     replace;
 run;
